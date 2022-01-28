@@ -1,0 +1,61 @@
+/* Custom Styles Sheet */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-image: linear-gradient(
+        92deg
+        , #83d25b, #4ca62e);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+}
+.nav-bar {
+    list-style: none;
+    display: flex;
+
+}
+.nav-bar li{
+    padding: 5px;
+    margin: 5px;
+}
+
+.wrapper {
+    display: flex;
+}
+.sidebar {
+    width: 15%;
+    background-color: rgb(35 35 35 / 52%);
+    color: white    ;
+}
+.main-content {
+    width: 85%;
+    padding: 10px;
+}
+.footer {
+    background-color: #212121;
+    color: #fff;
+    height: 100%;
+    padding: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+.video-wrapper  {
+    margin-top: 20px;
+}
+.btn-wrapper  {
+text-align: right;
+padding: 15px;
+}
+.btn-wrapper button {
+    padding: 10px 15px;
+    background: #2d2d2d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Authors Mani And Kavya */
