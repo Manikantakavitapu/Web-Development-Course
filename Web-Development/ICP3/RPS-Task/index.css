@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+button {
+    width: 100px;
+    height: 100px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
