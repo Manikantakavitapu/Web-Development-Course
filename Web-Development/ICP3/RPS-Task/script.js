@@ -6,7 +6,7 @@ var game = () => {
 		let paper = document.querySelector('.paper');
 		let scissor = document.querySelector('.scissor');
 		let userOptions = [rock,paper,scissor];
-		let computerOptions = ['rock','paper','scissors'];
+		let computerOptions = ['rock','paper','scissor'];
 		
 		// Function TO Select Options
 
@@ -18,7 +18,6 @@ var game = () => {
 				final(this.innerText,computerChoice)
 			})
 		})
-		
 	}
 
 	// Function to decide winner
@@ -37,7 +36,7 @@ var game = () => {
 				result.textContent = 'Player Won'
 			}
 		}
-		else if(player == 'scissors'){
+		else if(player == 'scissor'){
 			if(computer == 'rock'){
 				result.textContent = 'Computer Won';
 			}else{
@@ -45,7 +44,7 @@ var game = () => {
 			}
 		}
 		else if(player == 'paper'){
-			if(computer == 'scissors'){
+			if(computer == 'scissor'){
 				result.textContent = 'Computer Won';
 			}else{
 				result.textContent = 'Player Won';
