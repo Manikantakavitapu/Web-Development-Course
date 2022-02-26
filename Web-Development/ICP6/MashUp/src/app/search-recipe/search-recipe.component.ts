@@ -50,7 +50,12 @@ export class SearchRecipeComponent implements OnInit {
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
       /**
        * Write code to get place
+       * 
        */
+      this.SearchService.getVenues(this.recipeValue,this.placeValue).subscribe(item => {
+        this.venueList = item['results'];
+        console.log(this.venueList);
+      })
     }
   }
 }

@@ -6,12 +6,21 @@ import { Injectable } from '@angular/core';
 })
 export class SearchService {
 
-  url:string ='https://api.foursquare.com/v2/venues/search?client_id=14YJTB524BOWGFHRJSOBONL4AGY1NWVAOG0ZL1CBOD5S15XA&client_secret=IDOKM5M3HUE3FZ1ZHJOGLK2AZJFL33LKAOKKP0S3DKOXFLEO&query=Pizza&near=Kansas%20City&v=20220225';
+  url:string ='https://api.foursquare.com/v3/places/search?';
   
   constructor(private http: HttpClient) { }
 // For Getting The Venues
-  getVenues() {
-    return this.http.get(this.url);
+  getVenues(recipe, near) {
+    const options = {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        Authorization: 'fsq3qBsG/W/Qy1hOjDBuQ4jRMS1JfOgz6L3n57yGRFOaUpI='
+      }
+    };
+
+    let finalUrl = this.url + 'near=' + near + "&query=" + recipe
+    return this.http.get(finalUrl,options);
     }
   // For Getting the Recepies
     getSearchRecipe(value){
