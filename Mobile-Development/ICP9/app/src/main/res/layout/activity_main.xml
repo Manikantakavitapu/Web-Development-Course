@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Pizza Ordering App"
+        android:textSize="20dp"
+        android:background="@null"
+        />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="392dp"
+        android:layout_height="337dp"
+        android:layout_below="@id/title"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/pizza" />
+
+    <EditText
+        android:id="@+id/user_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:layout_below="@+id/image"
+         />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:layout_below="@+id/user_input"
+         />
+
+    <EditText
+        android:id="@+id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/email"
+        android:text="Pizza Prize: $10"
+        android:textSize="20dp"
+        android:background="@null"
+        />
+
+    <EditText
+        android:id="@+id/title2"
+        android:layout_below="@id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Select your pizza toppings($2 each)"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="9dp"
+        android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="cheese" />
+
+    <CheckBox
+        android:id="@+id/mushrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="mushrooms" />
+        <CheckBox
+            android:id="@+id/pepperoni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="pepperoni" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/linear2"
+        android:text="Quantity"
+
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/quantity1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/quantity"
+        >
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="8dp"
+            android:backgroundTint="#FFC107"
+            android:onClick="decrement"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="1"
+             />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="increment"
+            android:backgroundTint="#FFC107"
+
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantity1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/orderbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="80dp"
+            android:text="order" />
+
+        <Button
+            android:id="@+id/summarybtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="submitOrder"
+            android:text="Summary" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
